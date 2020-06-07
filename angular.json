@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "chats"
+    }
+  },
+  "defaultProject": "chats",
+  "cli": {
+    "analytics": "e09a2504-ad8a-4582-840a-539abaf5b320"
+  }
 }

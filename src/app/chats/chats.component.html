@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="../dialog/dialog.component.scss">
+<div class="container">
+<h1 class="chatsHeader">Chats</h1><div  *ngFor="let item of users" class="chatBox">
+  <div class="chatUser" >
+    <div class="chatPic">
+      <img src="{{item.icon}}" alt="" class="userPic">
+      <i class="fa fa-check-circle tickIcon"></i>
+    </div>
+    <div class="userOffer">
+      <h2 class="userHeader">{{item.adrresedPerson}}</h2>
+      <p class="userText">{{item.message}}</p>
+
+
+    </div>
+  </div>
+  </div>
+
+

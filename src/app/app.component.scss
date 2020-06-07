@@ -1,0 +1,29 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+
+}
+.leftBox{
+  width: 30%;
+  height: 600px;
+}
+.rightBox{
+  width: 70%;
+  background-color: #EEEEEE;
+height: 100%;
+}
+.footer{
+  height: 20px;
+  width: 75%;
+  margin: 0 auto;
+  background-color: #EEEEEE;
+  border-top: 1.5px solid gainsboro;
+  margin-top: -7px;
+
+}
