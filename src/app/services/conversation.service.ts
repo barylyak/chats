@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import {isMetadataGlobalReferenceExpression} from '@angular/compiler-cli';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ConversationService {
- public conversations = [
+
+  public conversations = [
     {
       adrresedPerson: 'Alice Freeman',
       icon: '../../assets/pic/aliceFreeman.jpeg',
@@ -61,60 +61,61 @@ export class ConversationService {
         },
       ]
     },
-   {
-     adrresedPerson: 'Velazquez',
-     icon: '../../assets/pic/Velazquez.jpeg',
-     messages: [
-       {
-         message: ['Hi', 'how are you?'],
-         owner: 'Velazquez',
-         icon: '../../assets/pic/Velazquez.jpeg',
-         data: '06/06',
-         time: '18:00'
-       },
-       {
-         message: ['Hi, what are you doing?'],
-         owner: 'Oleh',
-         icon: '',
-         data: '06/06',
-         time: '18:00'
-       },
-       {
-         message: ['Quickly come to the meeting room 1B, we have a big server issue'],
-         owner: 'Velazquez',
-         icon: '../../assets/pic/Velazquez.jpeg',
-         data: '06/06',
-         time: '18:00'
-       },
-     ]
-   },{
-     adrresedPerson: 'Barrera',
-     icon: '../../assets/pic/Barrera.jpg',
-     messages: [
-       {
-         message: ['Hi', 'how are you?'],
-         owner: 'Barrera',
-         icon: '../../assets/pic/Barrera.jpg',
-         data: '06/06',
-         time: '18:00'
-       },
-       {
-         message: ['Hi, what are you doing?'],
-         owner: 'Oleh',
-         icon: '',
-         data: '06/06',
-         time: '18:00'
-       },
-       {
-         message: ['Yes, i understand you! Come to me!'],
-         owner: 'Barrera',
-         icon: '../../assets/pic/Barrera.jpg',
-         data: '06/06',
-         time: '18:00'
-       },
-     ]
-   }
+    {
+      adrresedPerson: 'Velazquez',
+      icon: '../../assets/pic/Velazquez.jpeg',
+      messages: [
+        {
+          message: ['Hi', 'how are you?'],
+          owner: 'Velazquez',
+          icon: '../../assets/pic/Velazquez.jpeg',
+          data: '06/06',
+          time: '18:00'
+        },
+        {
+          message: ['Hi, what are you doing?'],
+          owner: 'Oleh',
+          icon: '',
+          data: '06/06',
+          time: '18:00'
+        },
+        {
+          message: ['Quickly come to the meeting room 1B, we have a big server issue'],
+          owner: 'Velazquez',
+          icon: '../../assets/pic/Velazquez.jpeg',
+          data: '06/06',
+          time: '18:00'
+        },
+      ]
+    }, {
+      adrresedPerson: 'Barrera',
+      icon: '../../assets/pic/Barrera.jpg',
+      messages: [
+        {
+          message: ['Hi', 'how are you?'],
+          owner: 'Barrera',
+          icon: '../../assets/pic/Barrera.jpg',
+          data: '06/06',
+          time: '18:00'
+        },
+        {
+          message: ['Hi, what are you doing?'],
+          owner: 'Oleh',
+          icon: '',
+          data: '06/06',
+          time: '18:00'
+        },
+        {
+          message: ['Yes, i understand you! Come to me!'],
+          owner: 'Barrera',
+          icon: '../../assets/pic/Barrera.jpg',
+          data: '06/06',
+          time: '18:00'
+        },
+      ]
+    }
   ];
+
   constructor() {
   }
 
@@ -178,16 +179,14 @@ export class ConversationService {
   // }
 
 
-
-
-   getAllChats(): Array<any> {
+  getAllChats(): Array<any> {
     return this.conversations.map(item => {
       return {
         adrresedPerson: item.adrresedPerson,
         icon: item.icon,
         // data: item.messages[item.messages],
         message: item.messages[item.messages.length - 1].message[item.messages[item.messages.length - 1].message.length - 1]
-      }
+      };
     });
   }
 }

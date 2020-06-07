@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ConversationService} from '../services/conversation.service';
 
 @Component({
@@ -7,11 +7,11 @@ import {ConversationService} from '../services/conversation.service';
   styleUrls: ['./chats.component.scss']
 })
 export class ChatsComponent implements OnInit {
- public users: Array<any>;
+  public users: Array<any>;
 
   constructor(public conversationService: ConversationService) {
     this.users = conversationService.getAllChats();
-console.log(this.users)
+    console.log(this.users);
   }
 
 
