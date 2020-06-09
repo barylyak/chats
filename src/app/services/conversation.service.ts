@@ -5,11 +5,11 @@ import {Injectable} from '@angular/core';
 })
 
 export class ConversationService {
-
   public conversations = [
     {
       adrresedPerson: 'Alice Freeman',
       icon: '../../assets/pic/aliceFreeman.jpeg',
+      dataGeneral: 'Jun 12, 2017',
       messages: [
         {
           message: ['Hi'],
@@ -37,6 +37,7 @@ export class ConversationService {
     {
       adrresedPerson: 'Josefina',
       icon: '../../assets/pic/Josefina.jpg',
+      dataGeneral: 'Feb 18, 2017',
       messages: [
         {
           message: ['Hi', 'how are you?'],
@@ -64,6 +65,7 @@ export class ConversationService {
     {
       adrresedPerson: 'Velazquez',
       icon: '../../assets/pic/Velazquez.jpeg',
+      dataGeneral: 'Mar 18, 2017',
       messages: [
         {
           message: ['Hi', 'how are you?'],
@@ -90,6 +92,7 @@ export class ConversationService {
     }, {
       adrresedPerson: 'Barrera',
       icon: '../../assets/pic/Barrera.jpg',
+      dataGeneral: 'Feb 12, 2017',
       messages: [
         {
           message: ['Hi', 'how are you?'],
@@ -119,72 +122,12 @@ export class ConversationService {
   constructor() {
   }
 
-  // public getConversations(): Array<any> {
-  //   return [
-  //     {
-  //       adrresedPerson: 'Oleg',
-  //       icon: '',
-  //       messages: [
-  //         {
-  //           message: ['Hi'],
-  //           owner: 'Oleg',
-  //           icon: '',
-  //           data: '06/06',
-  //           time: '18:00'
-  //         },
-  //         {
-  //           message: ['Hi, what are you doing?'],
-  //           owner: 'Petro',
-  //           icon: '',
-  //           data: '06/06',
-  //           time: '18:00'
-  //         },
-  //         {
-  //           message: ['Fine, what about you?'],
-  //           owner: 'Oleg',
-  //           icon: '',
-  //           data: '06/06',
-  //           time: '18:00'
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       adrresedPerson: 'Petro',
-  //       icon: '',
-  //       messages: [
-  //         {
-  //           message: ['Hi', 'how are you?'],
-  //           owner: 'Petro',
-  //           icon: '',
-  //           data: '06/06',
-  //           time: '18:00'
-  //         },
-  //         {
-  //           message: ['Hi, what are you doing?'],
-  //           owner: 'Petro',
-  //           icon: '',
-  //           data: '06/06',
-  //           time: '18:00'
-  //         },
-  //         {
-  //           message: ['Fine, what about you?'],
-  //           owner: 'Oleg',
-  //           icon: '',
-  //           data: '06/06',
-  //           time: '18:00'
-  //         }
-  //       ]
-  //     }
-  //   ];
-  // }
-
-
   getAllChats(): Array<any> {
     return this.conversations.map(item => {
       return {
         adrresedPerson: item.adrresedPerson,
         icon: item.icon,
-        // data: item.messages[item.messages],
+        dataGeneral: item.dataGeneral,
         message: item.messages[item.messages.length - 1].message[item.messages[item.messages.length - 1].message.length - 1]
       };
     });

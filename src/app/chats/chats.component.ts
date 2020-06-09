@@ -14,6 +14,8 @@ export class ChatsComponent implements OnInit {
     console.log(this.users);
   }
 
+  clickChat() {
+  }
 
   ngOnInit(): void {
   }

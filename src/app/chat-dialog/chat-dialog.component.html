@@ -1,11 +1,28 @@
 <div class="container">
-  <div class="dialogHeader"></div>
-  <div class="dialogSection"></div>
-  <div class="enterMassege">
-    <div class="search">
-      <input type="text" placeholder="Type you massege" class="searchInput">
-      <i class="fa fa-paper-plane searchIcon"></i>
+  <div class="dialogHeader">
+    <div>
+      <div class="chatPic">
+        <img src="" alt="" class="userPic">
+      </div>
+
+      <div class="userOffer">
+        <h2 class="userHeader"></h2>
+      </div>
+
     </div>
+  </div>
+
+  <div class="dialogSection">
+    <div class="userMessages"><p class="userMessage">{{message}}</p></div>
+    <div><p *ngFor="let joke of jokes" class="chuckMessage">{{joke.value}}</p></div>
+  </div>
+
+  <div class="enterMassege">
+
+    <div class="search">
+      <input type="text" placeholder="Type you massege" class="searchInput" #txt>
+     <div (click)="addChak()"> <i class="fa fa-paper-plane searchIcon" (click)="addMessage(txt)"></i>
+     </div></div>
   </div>
 
 </div>

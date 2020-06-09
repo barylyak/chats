@@ -1,7 +1,7 @@
 <!--<link rel="stylesheet" href="../dialog/dialog.component.scss">-->
 <div class="container">
-  <h1 class="chatsHeader">Chats  fff ggg ggg aaa</h1>
-  <div *ngFor="let item of users" class="chatBox">
+  <h1 class="chatsHeader">Chats</h1>
+  <div *ngFor="let item of users" class="chatBox" (click)="clickChat()">
     <div class="chatUser">
       <div class="chatPic">
         <img src="{{item.icon}}" alt="" class="userPic">
@@ -9,6 +9,7 @@
       </div>
       <div class="userOffer">
         <h2 class="userHeader">{{item.adrresedPerson}}</h2>
+        <p class="data">{{item.dataGeneral}}</p>
         <p class="userText">{{item.message}}</p>
 
 
